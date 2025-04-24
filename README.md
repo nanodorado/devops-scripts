@@ -1,8 +1,8 @@
-# 🛠️ DevOps Scripts & Infrastructure Playground
+# 🛠️ DevOps Scripts & Infrastructure
 
-This repository contains modular, real-world DevOps resources designed to demonstrate practical skills with cloud infrastructure, automation, monitoring, containerization, and troubleshooting.
+This repository contains modular resources designed to tackle cloud infrastructure, automation, monitoring, containerization, and troubleshooting tasks.
 
-Each folder represents a core area of DevOps and cloud engineering, with examples that can be reused, extended, or presented during interviews or workshops.
+Each folder represents a core area of DevOps and cloud engineering, with examples that can be reused, extended.
 
 ---
 
