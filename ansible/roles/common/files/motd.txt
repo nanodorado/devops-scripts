@@ -1,0 +1,2 @@
+﻿ðŸš€ DevOps EC2 configured by Ansible!
+Node Exporter installed, Docker ready, and tools available.

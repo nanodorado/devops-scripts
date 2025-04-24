@@ -1,0 +1,30 @@
+﻿- name: Update system packages
+  yum:
+    name: "*"
+    state: latest
+
+- name: Install basic tools
+  yum:
+    name:
+      - htop
+      - git
+      - tmux
+      - docker
+    state: present
+
+- name: Enable and start Docker
+  service:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: Add ec2-user to docker group
+  user:
+    name: ec2-user
+    groups: docker
+    append: yes
+
+- name: Copy custom MOTD
+  copy:
+    src: motd.txt
+    dest: /etc/motd

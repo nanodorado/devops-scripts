@@ -1,0 +1,6 @@
+﻿- name: Apply common configuration to EC2
+  hosts: dev
+  become: true
+
+  roles:
+    - common
