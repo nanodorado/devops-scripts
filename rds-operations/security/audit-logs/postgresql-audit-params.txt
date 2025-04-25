@@ -1,0 +1,9 @@
+﻿# RDS PostgreSQL Audit Logging Example
+
+# Add to your DB parameter group:
+log_statement = 'all'
+log_connections = 1
+log_disconnections = 1
+log_duration = 1
+log_min_duration_statement = 500
+log_statement_stats = 0

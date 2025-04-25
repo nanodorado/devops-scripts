@@ -11,28 +11,28 @@ This was built to:
 
 ## Files
 
-- \Dockerfile\: Builds a dashboard-like NGINX container
-- \	ask-definition.json\: Deployable on AWS ECS Fargate
+- Dockerfile: Builds a dashboard-like NGINX container
+- 	Task-definition.json: Deployable on AWS ECS Fargate
 
 ## Deployment Steps
 
 1. Build the image:
-   \\\ash
+   ```bash
    docker build -t infra-dashboard .
-   \\\
+   ```
 
 2. Push to ECR or Docker Hub:
-   \\\ash
+   ```bash
    docker tag infra-dashboard <your-ecr-repo>:latest
    docker push <your-ecr-repo>:latest
-   \\\
+   ```
 
-3. Replace \YOUR_ECR_OR_DOCKERHUB_IMAGE\ in \	ask-definition.json\
+3. Replace YOUR_ECR_OR_DOCKERHUB_IMAGE in 	ask-definition.json
 
 4. Register task definition:
-   \\\ash
+   ```bash
    aws ecs register-task-definition --cli-input-json file://task-definition.json
-   \\\
+   ```
 
 5. Run it in a Fargate service:
    - Cluster: devops-cluster
