@@ -1,0 +1,8 @@
+﻿{
+  \"replicationTaskIdentifier\": \"postgres-full-load\",
+  \"sourceEndpointArn\": \"arn:aws:dms:region:account:endpoint:source-endpoint-id\",
+  \"targetEndpointArn\": \"arn:aws:dms:region:account:endpoint:target-endpoint-id\",
+  \"migrationType\": \"full-load\",
+  \"tableMappings\": \"file://table-mappings.json\",
+  \"replicationTaskSettings\": \"file://task-settings.json\"
+}
