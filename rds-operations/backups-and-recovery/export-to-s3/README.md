@@ -2,31 +2,31 @@
 
 This folder includes examples to export RDS snapshots to Amazon S3 using the AWS CLI.
 
-## ðŸ“¤ Files
+## Files
 
-- \export-snapshot.sh\: Command to trigger an export task
-- \export-role-policy.json\: IAM policy for the role used to export to S3
+- export-snapshot.sh: Command to trigger an export task
+- export-role-policy.json: IAM policy for the role used to export to S3
 
-## ðŸ”§ Requirements
+## Requirements
 
 - An existing snapshot
 - A KMS key for encryption
 - A bucket with proper permissions
-- An IAM role with permissions from \export-role-policy.json\
+- An IAM role with permissions from export-role-policy.json
 
-## ðŸš€ Run the export
+## Run the export
 
-\\\ash
+```bash
 bash export-snapshot.sh
-\\\
+```
 
-## ðŸ›¡ï¸ Notes
+## Notes
 
 - Snapshot exports are **asynchronous**
 - Files will appear in S3 once the export completes
 - Exported format is Parquet (columnar), suitable for Athena and Redshift
 
-## âœ… Use Cases
+## Use Cases
 
 - Long-term backup storage in S3
 - Compliance / archival snapshots
